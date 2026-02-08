@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* --- VARIÁVEIS E CORES --- */
+:root {
+    --cor-principal: #000000;
+    --cor-secundaria: #22d4fd;
+    --cor-terciaria: #9d05f5;
+    --cor-quartiaria: #ffff00;
+    --cor-quinta: #ff0000;
+    --cor-sexta: #ffff;
+    --cor-THOR-TITULOEDESTAQUES: #990000;
+    --cor-THOR-LINKDASPAGINAS: #D4AF37;
+    --cor-THOR-TEXTOERODAPE: #7A7F80;
+    --cor-THOR-FUNDO: #1A1A1A;
+    --cor-THOR-HOVER: #00CCFF;
+    --cor-VADER-FUNDO: #1C1C1C;
+    --cor-VADER-TITULOSDESTAQUES: #E5E4E2;
+    --cor-VADER-RODAPE: #800000;
+    --cor-VADER-TEXTO: #5A5A5A;
+    --cor-VADER-LINKDASPAGINAS: #F8F9FA;
+    --cor-hoversecundario: #1cff08;
+    --cor-VADER-HOUVER: #800000;
+    --cor-ONE-TITULOERODAPE: #FF5A00;
+    --cor-ONE-FUNDO: #0F0F0F ;
+    --cor-ONE-DESTAQUESELIN: #F0F0F0 ;
+    --cor-ONE-TEXTO: #A0A0A0;
+
+    --fonte-principal: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+/* --- RESET GERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+}
+
+.finaleditioncores{
+    box-sizing: border-box;
+    background-color: var(--cor-THOR-FUNDO);
+    color: var(--cor-secundaria);
+}
+
+.finalcores{
+    box-sizing: border-box;
+    background-color: var(--cor-VADER-FUNDO);
+    color: var(--cor-secundaria);
+}
+
+.finalEFcores{
+    box-sizing: border-box;
+    background-color: var(--cor-ONE-FUNDO);
+    color: var(--cor-secundaria);
+}
+
+/* --- CABEÇALHO (HEADER) --- */
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho_menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho_menu_link {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.cabecalho_menu_link:hover {
+    /*-- background-color: var(--cor-terciaria); --*/
+    color: var(--cor-secundaria);
+    cursor: pointer;
+}
+
+
+.cabecalho_menu_link2 {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-quartiaria);
+    text-decoration: none;
+}
+
+.cabecalho_menu_link2:hover {
+    /*-- background-color: var(--cor-terciaria); --*/
+    color: var(--cor-hoversecundario);
+    cursor: pointer;
+}
+
+.cabecalho_menu_link4 {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-VADER-HOUVER);
+    text-decoration: none;
+}
+
+.cabecalho_menu_link4:hover {
+    /*-- background-color: var(--cor-terciaria); --*/
+    color: var(--cor-quinta);
+    cursor: pointer;
+}
+
+
+.cabecalho_menu_link3 {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-THOR-LINKDASPAGINAS);
+    text-decoration: none;
+}
+
+.cabecalho_menu_link3:hover {
+    /*-- background-color: var(--cor-terciaria); --*/
+    color: var(--cor-THOR-HOVER);
+    cursor: pointer;
+}
+
+.cabecalho_menu_link5 {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-ONE-DESTAQUESELIN);
+    text-decoration: none;
+}
+
+.cabecalho_menu_link5:hover {
+    /*-- background-color: var(--cor-terciaria); --*/
+    color: var(--cor-ONE-TITULOERODAPE);
+    cursor: pointer;
+}
+
+/* --- ESTRUTURA PRINCIPAL (MAIN) --- */
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+/* --- CONTEÚDO (TEXTOS E LISTAS) --- */
+.apresentacao__conteudo {
+    width: 50%; /* Padrão: ocupa metade da tela (para Home e Sobre) */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* TRUQUE INTELIGENTE: 
+   Se o conteúdo for o único item (sem imagem ao lado, como na página de Carros),
+   ele ocupa 100% da largura automaticamente. */
+.apresentacao__conteudo:only-child {
+    width: 100%;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    font-family: var(--fonte-principal);
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__titulo2 {
+    font-size: 2.25rem;
+    font-family: var(--fonte-principal);
+    color: var(--cor-quartiaria);
+}
+
+.apresentacao__conteudo__titulo3 {
+    font-size: 2.25rem;
+    font-family: var(--fonte-principal);
+    color: var(--cor-THOR-TITULOEDESTAQUES);
+}
+
+.apresentacao__conteudo__titulo4 {
+    font-size: 2.25rem;
+    font-family: var(--fonte-principal);
+    color: var(--cor-VADER-TITULOSDESTAQUES);
+}
+
+.apresentacao__conteudo__titulo5 {
+    font-size: 2.25rem;
+    font-family: var(--fonte-principal);
+    color: var(--cor-ONE-TITULOERODAPE);
+}
+
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.titulo-destaque2 {
+    color: var(--cor-quinta);
+}
+
+.titulo-destaque3 {
+    color: var(--cor-THOR-TITULOEDESTAQUES);
+}
+
+.titulo-destaque4 {
+    color: var(--cor-VADER-TITULOSDESTAQUES);
+}
+
+.titulo-destaque5 {
+    color: var(--cor-ONE-DESTAQUESELIN);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__conteudo__texto2 {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-sexta);
+}
+
+.apresentacao__conteudo__texto3 {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-THOR-TEXTOERODAPE);
+}
+
+.apresentacao__conteudo__texto4 {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-VADER-TEXTO);
+}
+
+.apresentacao__conteudo__texto5 {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-ONE-TEXTO);
+}
+
+
+
+/* --- LINKS E BOTÕES (ESTILO GERAL) --- */
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao_links_subtitulo {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+}
+
+/* Estilo padrão do botão (usado na Home e Sobre) */
+.apresentacao__links_navegacao {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente o texto */
+    gap: 16px;
+    
+    width: 378px; /* Tamanho fixo original para a Home */
+    padding: 21.5px 0;
+    
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-terciaria);
+    background-color: transparent;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.apresentacao__links_navegacao2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente o texto */
+    gap: 16px; /* Reduzi o gap para o conteúdo caber melhor */
+    
+    width: 100%;           /* Ocupa a largura da coluna do grid */
+    max-width: 378px;      /* Não deixa passar do tamanho máximo */
+    height: auto;          /* Deixa a altura se ajustar ao conteúdo */
+    min-height: 140px;     /* Garante a altura mínima (140px) */
+    
+    padding: 20px;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    
+    font-size: 1.2rem;     /* Ajustado para caber melhor em 266px */
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-terciaria);
+    background-color: transparent;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.grade-carros2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+}
+
+/* Ajuste ESPECÍFICO para os botões quando estão dentro da grade de carros */
+.grade-carros2 .apresentacao__links_navegacao {
+    width: 100%;  /* Ocupa todo o espaço do quadrado da grade */
+    height: 100%; /* Altura total */
+    padding: 20px;
+    font-size: 1.2rem; /* Fonte ligeiramente menor para caber nomes longos */
+}
+
+.apresentacao__links_navegacao:hover {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-principal);
+    cursor: pointer;
+}
+
+.apresentacao__links_navegacao2:hover {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-principal);
+    cursor: pointer;
+}
+
+/* --- GRADE DE CARROS (CSS GRID) --- */
+.grade-carros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Colunas */
+    grid-auto-rows: 1fr;                   /* Altura igual para todos */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Ajuste ESPECÍFICO para os botões quando estão dentro da grade de carros */
+.grade-carros .apresentacao__links_navegacao {
+    width: 100%;  /* Ocupa todo o espaço do quadrado da grade */
+    height: 100%; /* Altura total */
+    padding: 20px;
+    font-size: 1.2rem; /* Fonte ligeiramente menor para caber nomes longos */
+}
+
+.grade-carros3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Colunas */
+    grid-auto-rows: 1fr;                   /* Altura igual para todos */
+    gap: 20px;
+    width: 100%;
+}
+
+/* Ajuste ESPECÍFICO para os botões quando estão dentro da grade de carros */
+.grade-carros3 .apresentacao__links_navegacao {
+    width: 100%;  /* Ocupa todo o espaço do quadrado da grade */
+    height: 100%; /* Altura total */
+    padding: 20px;
+    font-size: 1.2rem; /* Fonte ligeiramente menor para caber nomes longos */
+}
+
+/* --- IMAGENS E RODAPÉ --- */
+.apresentacao_imagem {
+    width: 50%;
+}
+
+.ONE_OF_ONE {
+    width: 50%;
+}
+
+.apresentacao_imagem2 {
+    width: 60%;
+}
+
+
+.rodape {
+    padding: 24px;
+    color: var(--cor-principal);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/*-- .rodape:hover {
+    /*-- background-color: var(--cor-terciaria); 
+    color: var(--cor-THOR-HOVERs);
+    cursor: pointer;
+} --*/
+
+.rodape2 {
+    padding: 24px;
+    color: var(--cor-principal);
+    background-color: var(--cor-quartiaria);
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+.rodape3 {
+    padding: 24px;
+    color: var(--cor-THOR-TEXTOERODAPE);
+    background-color: var(--cor-THOR-TITULOEDESTAQUES);
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.rodape4 {
+    padding: 24px;
+    color: var(--cor-VADER-LINKDASPAGINAS);
+    background-color: var(--cor-VADER-RODAPE);
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.rodape5 {
+    padding: 24px;
+    color: var(--cor-ONE-DESTAQUESELIN);
+    background-color: var(--cor-ONE-TITULOERODAPE);
+    text-align: center;
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* --- RESPONSIVIDADE (Celulares e Tablets) --- */
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho_menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse; /* Imagem vai para cima em telas pequenas */
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: 100%; /* Ocupa largura total no celular */
+    }
+
+    .apresentação_imagem {
+        width: 100%;
+    }
+
+    /* Transforma a grade de carros em 1 coluna no celular */
+    .grade-carros {
+        grid-template-columns: 1fr;
+    }
+
+    .apresentacao__links_navegacao2 {
+        max-width: 100%;    /* No celular, ele pode ocupar a tela toda se necessário */
+        height: 273px;      /* Valor para o celular */
+    }
+
+        /* Transforma a grade de carros em 1 coluna no celular */
+    .grade-carros2 {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .grade-carros3 {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+
+}

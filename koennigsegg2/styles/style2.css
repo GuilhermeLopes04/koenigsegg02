@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-principal: #000000;
+    --cor-secundaria: #22d4fd;
+    --cor-terciaria: #9d05f5;
+
+    --fonte-princial: 'krona one', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho_menu {
+    display: flex;
+    gap: 80px;
+
+}
+
+.cabecalho_menu_link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.apresentacao__conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-princial);
+    color: var(--cor-terciaria);
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.apresentacao_links_subtitulo {
+    font-family: var(--fonte-princial);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__links_navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 378px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-terciaria);
+}
+
+.apresentação_imagem {
+    width: 50%;
+}
+
+.rodape {
+    padding: 24px;
+    color: var(--cor-principal);
+    background-color: var(--cor-terciaria);
+    text-align: center;
+    font-family: var(--fonte-princial);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width:1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho_menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
+
+/* 1. Ajuste da largura do conteúdo principal */
+.apresentacao__conteudo {
+    width: 100%; /* Mudamos de 50% para 100% para ter espaço para 4 colunas */
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* 2. Criação da Grade (O segredo dos 4 itens) */
+.grade-carros {
+    display: grid; /* Ativa o modo de grade */
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de tamanho igual */
+    gap: 20px; /* Espaço entre os carros */
+    width: 100%;
+}
+
+/* 3. Ajuste visual dos botões */
+.apresentacao__links_navegacao {
+    /* Removemos a largura fixa de 378px */
+    width: 100%; 
+    display: flex; /* Garante que o texto fique centralizado */
+    justify-content: center;
+    align-items: center;
+    
+    /* Mantemos o resto do teu estilo original */
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    font-size: 1.1rem; /* Diminuí um pouco a fonte para caber melhor */
+    font-weight: 600;
+    padding: 20px 0;
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-terciaria);
+    box-sizing: border-box; /* Importante para a borda não quebrar o layout */
+}
+
+/* EXTRA: Para telemóveis, voltar a ser 1 coluna */
+@media (max-width: 1200px) {
+    .grade-carros {
+        grid-template-columns: 1fr; /* Em telas pequenas, volta a ser 1 coluna */
+    }
+}
+
+/* A grade define a estrutura */
+.grade-carros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    /* O 'auto-rows' é opcional, mas ajuda a garantir uniformidade */
+    grid-auto-rows: 1fr; 
+}
+
+/* O estilo visual de cada botão */
+.apresentacao__links_navegacao {
+    /* Dimensões */
+    width: 100%;
+    height: 100%; /* Força o botão a ocupar toda a altura da célula da grade */
+    
+    /* Alinhamento do texto (Flexbox) */
+    display: flex;
+    justify-content: center; /* Centra na horizontal */
+    align-items: center;     /* Centra na vertical (o segredo!) */
+    text-align: center;      /* Garante que textos de 2 linhas fiquem centralizados */
+    
+    /* Estética (mantendo o teu estilo) */
+    background-color: transparent; /* Ou a cor que preferires */
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 15px; /* Reduzi o padding fixo para o Flexbox cuidar do espaço */
+    text-decoration: none;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-terciaria);
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.apresentacao__links_navegacao:hover {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-principal); /* Adicionei para mudar a cor do texto ao passar o mouse */
+}
