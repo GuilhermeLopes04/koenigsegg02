@@ -396,13 +396,13 @@ body {
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
     font-weight: 400;
+    text-decoration: none;
 }
 
-/*-- .rodape:hover {
-    /*-- background-color: var(--cor-terciaria); 
-    color: var(--cor-THOR-HOVERs);
+.rodape:hover {
+    color: var(--cor-secundaria);
     cursor: pointer;
-} --*/
+}
 
 .rodape2 {
     padding: 24px;
@@ -412,17 +412,28 @@ body {
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
     font-weight: 400;
+    text-decoration: none;
 }
 
+.rodape2:hover {
+    color: var(--cor-quinta);
+    cursor: pointer;
+}
 
 .rodape3 {
     padding: 24px;
-    color: var(--cor-THOR-TEXTOERODAPE);
+    color: var(--cor-THOR-LINKDASPAGINAS);
     background-color: var(--cor-THOR-TITULOEDESTAQUES);
     text-align: center;
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
     font-weight: 400;
+    text-decoration: none;
+}
+
+.rodape3:hover {
+    color: var(--cor-THOR-HOVER);
+    cursor: pointer;
 }
 
 .rodape4 {
@@ -433,6 +444,12 @@ body {
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
     font-weight: 400;
+    text-decoration: none;
+}
+
+.rodape4:hover {
+    color: var(--cor-VADER-FUNDO);
+    cursor: pointer;
 }
 
 .rodape5 {
@@ -443,10 +460,16 @@ body {
     font-family: var(--fonte-principal);
     font-size: 1.5rem;
     font-weight: 400;
+    text-decoration: none;
+}
+
+.rodape5:hover {
+    color: var(--cor-ONE-FUNDO);
+    cursor: pointer;
 }
 
 /* --- RESPONSIVIDADE (Celulares e Tablets) --- */
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
     .cabecalho {
         padding: 10%;
     }
