@@ -141,6 +141,20 @@ body {
     cursor: pointer;
 }
 
+.cabecalho_menu_link_hundra {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-quinta);
+    text-decoration: none;
+}
+
+.cabecalho_menu_link_hundra:hover {
+    color: var(--cor-quartiaria);
+    cursor: pointer;
+}
+
+
 /* --- ESTRUTURA PRINCIPAL (MAIN) --- */
 .apresentacao {
     padding: 5% 15%;
@@ -149,6 +163,16 @@ body {
     justify-content: space-between;
     gap: 82px;
 }
+
+.FinalEdition-pagina {
+    padding: 5% 15%;
+    display: flexbox;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+
 
 /* --- CONTEÚDO (TEXTOS E LISTAS) --- */
 .apresentacao__conteudo {
@@ -204,8 +228,8 @@ body {
     color: var(--cor-quinta);
 }
 
-.titulo-destaque3 {
-    color: var(--cor-THOR-TITULOEDESTAQUES);
+.titulo-destaque-hundra {
+    color: var(--cor-quartiaria);
 }
 
 .titulo-destaque4 {
@@ -348,6 +372,7 @@ body {
     grid-auto-rows: 1fr;                   /* Altura igual para todos */
     gap: 20px;
     width: 100%;
+
 }
 
 /* Ajuste ESPECÍFICO para os botões quando estão dentro da grade de carros */
@@ -375,13 +400,98 @@ body {
 }
 
 /* --- IMAGENS E RODAPÉ --- */
-.apresentacao_imagem {
+.blog_imagem {
     width: 50%;
 }
 
+.apresentacao_imagem {
+    width: 50%;
+    margin: 25px;
+    filter: drop-shadow(0 0 15px rgba(34, 212, 253, 0.9));
+    border: 2px solid #9d05f5;
+    transition: filter 0.4s ease, transform 0.4s ease, border-color 0.4s ease;    
+    transform: translateZ(0); 
+}
+
+.apresentacao_imagem:hover {
+    filter: drop-shadow(0 0 40px rgba(157, 5, 245, 0.6));
+    border-color: #22d4fd;
+    transform: scale(1.05); 
+    cursor: pointer;
+}
+
+.HUNDRA {
+    width: 50%;
+    margin: 25px;
+    
+    /* 1. ESTADO NORMAL: OURO PURO */
+    /* Luz Dourada (#D4AF37) profunda */
+    filter: drop-shadow(0 0 15px rgba(248, 249, 250, 0.9));
+    border: 2px solid #D4AF37;
+    
+    transition: filter 0.4s ease, transform 0.4s ease, border-color 0.4s ease;
+    transform: translateZ(0); 
+}
+
+.HUNDRA:hover {
+    filter: drop-shadow(0 0 35px rgba(212, 175, 55, 0.6));
+
+    border-color: #ffc800;
+    
+    transform: scale(1.03); 
+    cursor: pointer;
+}
+
+
 .ONE_OF_ONE {
     width: 50%;
+    margin: 25px;
+    filter: drop-shadow(0 0 15px rgba(240, 240, 240, 0.5));
+    border: 2px solid #F0F0F0;
+    transition: filter 0.4s ease, transform 0.4s ease, border-color 0.4s ease;    
+    transform: translateZ(0); 
 }
+
+.ONE_OF_ONE:hover {
+    filter: drop-shadow(0 0 35px rgba(255, 90, 0, 0.9));
+    border-color: #FF5A00;
+    transform: scale(1.03); 
+    cursor: pointer;
+}
+
+
+.VADER {
+    width: 50%;
+    margin: 20px;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+    border: 2px solid #E5E4E2;
+    transition: filter 0.4s ease, transform 0.4s ease, border-color 0.3s ease;   
+    transform: translateZ(0); 
+}
+
+.VADER:hover {
+    filter: drop-shadow(0 0 50px rgba(255, 0, 0, 0.9));
+    border-color: var(--cor-VADER-LINKDASPAGINAS);
+    transform: scale(1.02); 
+    cursor: pointer;
+}
+
+.THOR {
+    width: 50%;
+    margin: 25px;
+    filter: drop-shadow(0 0 15px rgba(153, 0, 0, 0.7));
+    border: 2px solid #D4AF37;
+    transition: filter 0.3s ease-out, transform 0.3s ease, border-color 0.3s ease;    
+    transform: translateZ(0); 
+}
+
+.THOR:hover {
+    filter: drop-shadow(0 0 40px rgba(0, 204, 255, 1));
+    border-color: #00CCFF;
+    transform: scale(1.03); 
+    cursor: pointer;
+}
+
 
 .apresentacao_imagem2 {
     width: 60%;
@@ -400,7 +510,7 @@ body {
 }
 
 .rodape:hover {
-    color: var(--cor-secundaria);
+    color: var(--cor-quartiaria);
     cursor: pointer;
 }
 
@@ -469,7 +579,7 @@ body {
 }
 
 /* --- RESPONSIVIDADE (Celulares e Tablets) --- */
-@media (max-width: 1500px) {
+@media (max-width: 1200px) {
     .cabecalho {
         padding: 10%;
     }
@@ -514,4 +624,25 @@ body {
         align-items: center;
     }
 
+    .rodape, .rodape2, .rodape3, .rodape4, .rodape5 {
+        padding: 15px;      /* Reduzimos o espaço interno */
+        font-size: 1rem;    /* Diminuímos o tamanho da letra para caber na linha */
+        width: 100%;        /* Garante que ocupe a largura total */
+        box-sizing: border-box; 
+    }
+
+    .rodape, .rodape2, .rodape3, .rodape4, .rodape5 {
+        display: block;     /* Garante que o link se comporte bem no bloco */
+        padding: 10px;      /* Ajuste específico para o link dentro do rodapé */
+        overflow: hidden;
+        
+    }
+
+}
+
+@media (max-width: 480px) {
+    .rodape, .rodape2, .rodape3, .rodape4, .rodape5  {
+        font-size: 0.9rem;  /* Letra ainda menor para ecrãs muito pequenos */
+        padding: 8px;
+    }
 }
