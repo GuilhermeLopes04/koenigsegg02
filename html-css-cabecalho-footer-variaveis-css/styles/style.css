@@ -41,20 +41,23 @@ body {
     color: var(--cor-secundaria);
 }
 
+/* Classe para o link da página atual */
+.cabecalho_menu_link_ativo {
+    color: var(--cor-secundaria);
+    border-bottom: 2px solid var(--cor-secundaria);
+}
+
 .finaleditioncores{
-    box-sizing: border-box;
     background-color: var(--cor-THOR-FUNDO);
     color: var(--cor-secundaria);
 }
 
 .finalcores{
-    box-sizing: border-box;
     background-color: var(--cor-VADER-FUNDO);
     color: var(--cor-secundaria);
 }
 
 .finalEFcores{
-    box-sizing: border-box;
     background-color: var(--cor-ONE-FUNDO);
     color: var(--cor-secundaria);
 }
@@ -98,7 +101,7 @@ body {
     cursor: pointer;
 }
 
-.cabecalho_menu_link4 {
+.cabecalho_menu_link-VADER {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 600;
@@ -106,14 +109,14 @@ body {
     text-decoration: none;
 }
 
-.cabecalho_menu_link4:hover {
+.cabecalho_menu_link-VADER:hover {
     /*-- background-color: var(--cor-terciaria); --*/
     color: var(--cor-quinta);
     cursor: pointer;
 }
 
 
-.cabecalho_menu_link3 {
+.cabecalho_menu_link-THOR {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 600;
@@ -121,13 +124,13 @@ body {
     text-decoration: none;
 }
 
-.cabecalho_menu_link3:hover {
+.cabecalho_menu_link-THOR:hover {
     /*-- background-color: var(--cor-terciaria); --*/
     color: var(--cor-THOR-HOVER);
     cursor: pointer;
 }
 
-.cabecalho_menu_link5 {
+.cabecalho_menu_link-ONE-OF-ONE {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 600;
@@ -135,7 +138,7 @@ body {
     text-decoration: none;
 }
 
-.cabecalho_menu_link5:hover {
+.cabecalho_menu_link-ONE-OF-ONE:hover {
     /*-- background-color: var(--cor-terciaria); --*/
     color: var(--cor-ONE-TITULOERODAPE);
     cursor: pointer;
@@ -166,13 +169,11 @@ body {
 
 .FinalEdition-pagina {
     padding: 5% 15%;
-    display: flexbox;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 82px;
 }
-
-
 
 /* --- CONTEÚDO (TEXTOS E LISTAS) --- */
 .apresentacao__conteudo {
@@ -195,25 +196,25 @@ body {
     color: var(--cor-terciaria);
 }
 
-.apresentacao__conteudo__titulo2 {
+.apresentacao__conteudo__hundra {
     font-size: 2.25rem;
     font-family: var(--fonte-principal);
     color: var(--cor-quartiaria);
 }
 
-.apresentacao__conteudo__titulo3 {
+.apresentacao__conteudo__titulo-THOR {
     font-size: 2.25rem;
     font-family: var(--fonte-principal);
     color: var(--cor-THOR-TITULOEDESTAQUES);
 }
 
-.apresentacao__conteudo__titulo4 {
+.apresentacao__conteudo__titulo-VADER {
     font-size: 2.25rem;
     font-family: var(--fonte-principal);
     color: var(--cor-VADER-TITULOSDESTAQUES);
 }
 
-.apresentacao__conteudo__titulo5 {
+.apresentacao__conteudo__titulo-ONE-OF-ONE {
     font-size: 2.25rem;
     font-family: var(--fonte-principal);
     color: var(--cor-ONE-TITULOERODAPE);
@@ -224,19 +225,19 @@ body {
     color: var(--cor-terciaria);
 }
 
-.titulo-destaque2 {
-    color: var(--cor-quinta);
-}
-
 .titulo-destaque-hundra {
     color: var(--cor-quartiaria);
 }
 
-.titulo-destaque4 {
+.titulo-destaque-THOR {
+    color:var(--cor-THOR-TITULOEDESTAQUES)
+}
+
+.titulo-destaque-VADER {
     color: var(--cor-VADER-TITULOSDESTAQUES);
 }
 
-.titulo-destaque5 {
+.titulo-destaque-ONE-OF-ONE {
     color: var(--cor-ONE-DESTAQUESELIN);
 }
 
@@ -245,25 +246,25 @@ body {
     font-family: var(--fonte-secundaria);
 }
 
-.apresentacao__conteudo__texto2 {
+.apresentacao__conteudo__texto_hundra{
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
     color: var(--cor-sexta);
 }
 
-.apresentacao__conteudo__texto3 {
+.apresentacao__conteudo__texto-THOR {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
     color: var(--cor-THOR-TEXTOERODAPE);
 }
 
-.apresentacao__conteudo__texto4 {
+.apresentacao__conteudo__texto-VADER {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
     color: var(--cor-VADER-TEXTO);
 }
 
-.apresentacao__conteudo__texto5 {
+.apresentacao__conteudo__texto-ONE-OF-ONE {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
     color: var(--cor-ONE-TEXTO);
@@ -337,7 +338,7 @@ body {
     box-sizing: border-box;
 }
 
-.grade-carros2 {
+.grade-carros-FE {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 20px;
@@ -346,7 +347,7 @@ body {
 }
 
 /* Ajuste ESPECÍFICO para os botões quando estão dentro da grade de carros */
-.grade-carros2 .apresentacao__links_navegacao {
+.grade-carros-FE .apresentacao__links_navegacao {
     width: 100%;  /* Ocupa todo o espaço do quadrado da grade */
     height: 100%; /* Altura total */
     padding: 20px;
@@ -383,7 +384,7 @@ body {
     font-size: 1.2rem; /* Fonte ligeiramente menor para caber nomes longos */
 }
 
-.grade-carros3 {
+.grade-carros-AGERA {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 Colunas */
     grid-auto-rows: 1fr;                   /* Altura igual para todos */
@@ -392,7 +393,7 @@ body {
 }
 
 /* Ajuste ESPECÍFICO para os botões quando estão dentro da grade de carros */
-.grade-carros3 .apresentacao__links_navegacao {
+.grade-carros-AGERA .apresentacao__links_navegacao {
     width: 100%;  /* Ocupa todo o espaço do quadrado da grade */
     height: 100%; /* Altura total */
     padding: 20px;
@@ -492,9 +493,19 @@ body {
     cursor: pointer;
 }
 
+.apresentacao_video {
+    margin: 25px;
+    filter: drop-shadow(0 0 15px rgba(34, 212, 253, 0.9));
+    border: 2px solid #9d05f5;
+    transition: filter 0.4s ease, transform 0.4s ease, border-color 0.4s ease;    
+    transform: translateZ(0);  
+}
 
-.apresentacao_imagem2 {
-    width: 60%;
+.apresentacao_video:hover {
+    filter: drop-shadow(0 0 40px rgba(157, 5, 245, 0.6));
+    border-color: #22d4fd;
+    transform: scale(1.05); 
+    cursor: pointer;
 }
 
 
@@ -514,7 +525,7 @@ body {
     cursor: pointer;
 }
 
-.rodape2 {
+.rodape_hundra {
     padding: 24px;
     color: var(--cor-principal);
     background-color: var(--cor-quartiaria);
@@ -525,12 +536,12 @@ body {
     text-decoration: none;
 }
 
-.rodape2:hover {
+.rodape_hundra:hover {
     color: var(--cor-quinta);
     cursor: pointer;
 }
 
-.rodape3 {
+.rodape-THOR {
     padding: 24px;
     color: var(--cor-THOR-LINKDASPAGINAS);
     background-color: var(--cor-THOR-TITULOEDESTAQUES);
@@ -541,12 +552,12 @@ body {
     text-decoration: none;
 }
 
-.rodape3:hover {
+.rodape-THOR:hover {
     color: var(--cor-THOR-HOVER);
     cursor: pointer;
 }
 
-.rodape4 {
+.rodape-VADER {
     padding: 24px;
     color: var(--cor-VADER-LINKDASPAGINAS);
     background-color: var(--cor-VADER-RODAPE);
@@ -557,12 +568,12 @@ body {
     text-decoration: none;
 }
 
-.rodape4:hover {
+.rodape-VADER:hover {
     color: var(--cor-VADER-FUNDO);
     cursor: pointer;
 }
 
-.rodape5 {
+.rodape-ONE-OF-ONE {
     padding: 24px;
     color: var(--cor-ONE-DESTAQUESELIN);
     background-color: var(--cor-ONE-TITULOERODAPE);
@@ -573,7 +584,7 @@ body {
     text-decoration: none;
 }
 
-.rodape5:hover {
+.rodape-ONE-OF-ONE:hover {
     color: var(--cor-ONE-FUNDO);
     cursor: pointer;
 }
@@ -612,36 +623,41 @@ body {
     }
 
         /* Transforma a grade de carros em 1 coluna no celular */
-    .grade-carros2 {
+    .grade-carros-FE {
         grid-template-columns: 1fr;
         justify-items: center;
         align-items: center;
     }
 
-    .grade-carros3 {
+    .grade-carros-AGERA {
         grid-template-columns: 1fr;
         justify-items: center;
         align-items: center;
     }
 
-    .rodape, .rodape2, .rodape3, .rodape4, .rodape5 {
+    .rodape, .rodape_hundra, .rodape-THOR, .rodape-VADER, .rodape-ONE-OF-ONE {
         padding: 15px;      /* Reduzimos o espaço interno */
         font-size: 1rem;    /* Diminuímos o tamanho da letra para caber na linha */
         width: 100%;        /* Garante que ocupe a largura total */
         box-sizing: border-box; 
     }
 
-    .rodape, .rodape2, .rodape3, .rodape4, .rodape5 {
+    .rodape, .rodape_hundra, .rodape-THOR, .rodape-VADER, .rodape-ONE-OF-ONE {
         display: block;     /* Garante que o link se comporte bem no bloco */
         padding: 10px;      /* Ajuste específico para o link dentro do rodapé */
         overflow: hidden;
         
     }
 
+    .apresentacao_video {
+        width: 560;
+        height: 315;
+    }
+
 }
 
 @media (max-width: 480px) {
-    .rodape, .rodape2, .rodape3, .rodape4, .rodape5  {
+    .rodape, .rodape_hundra, .rodape-THOR, .rodape-VADER, .rodape-ONE-OF-ONE  {
         font-size: 0.9rem;  /* Letra ainda menor para ecrãs muito pequenos */
         padding: 8px;
     }
