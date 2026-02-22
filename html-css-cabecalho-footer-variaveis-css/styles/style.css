@@ -38,13 +38,19 @@
 body {
     box-sizing: border-box;
     background-color: var(--cor-principal);
-    color: var(--cor-secundaria);
+    color: var(--cor-ONE-DESTAQUESELIN);
 }
 
 /* Classe para o link da página atual */
 .cabecalho_menu_link_ativo {
+    border-bottom: 2px solid;
+
+}
+
+.ativo {
     color: var(--cor-secundaria);
     border-bottom: 2px solid var(--cor-secundaria);
+
 }
 
 .finaleditioncores{
@@ -91,14 +97,15 @@ body {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--cor-quartiaria);
+    color: var(--cor-secundaria);
     text-decoration: none;
 }
 
 .cabecalho_menu_link2:hover {
     /*-- background-color: var(--cor-terciaria); --*/
-    color: var(--cor-hoversecundario);
+    color: var(--cor-quartiaria);
     cursor: pointer;
+    border-bottom: 2px solid var(--cor-quartiaria);    
 }
 
 .cabecalho_menu_link-VADER {
@@ -142,19 +149,21 @@ body {
     /*-- background-color: var(--cor-terciaria); --*/
     color: var(--cor-ONE-TITULOERODAPE);
     cursor: pointer;
+    border-bottom: 2px solid var(--cor-ONE-TITULOERODAPE);
 }
 
 .cabecalho_menu_link_hundra {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--cor-quinta);
+    color: var(--cor-secundaria);
     text-decoration: none;
 }
 
 .cabecalho_menu_link_hundra:hover {
     color: var(--cor-quartiaria);
     cursor: pointer;
+    border-bottom: 2px solid var(--cor-quartiaria);
 }
 
 
