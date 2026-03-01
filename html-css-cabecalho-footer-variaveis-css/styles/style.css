@@ -247,7 +247,7 @@ body {
 }
 
 .titulo-destaque-ONE-OF-ONE {
-    color: var(--cor-ONE-DESTAQUESELIN);
+    color: var(--cor-ONE-TITULOERODAPE);
 }
 
 .apresentacao__conteudo__texto {
@@ -347,22 +347,6 @@ body {
     box-sizing: border-box;
 }
 
-.grade-carros-FE {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 20px;
-    width: 100%;
-    justify-items: center;
-}
-
-/* Ajuste ESPECÍFICO para os botões quando estão dentro da grade de carros */
-.grade-carros-FE .apresentacao__links_navegacao {
-    width: 100%;  /* Ocupa todo o espaço do quadrado da grade */
-    height: 100%; /* Altura total */
-    padding: 20px;
-    font-size: 1.2rem; /* Fonte ligeiramente menor para caber nomes longos */
-}
-
 .apresentacao__links_navegacao:hover {
     background-color: var(--cor-terciaria);
     color: var(--cor-principal);
@@ -393,20 +377,34 @@ body {
     font-size: 1.2rem; /* Fonte ligeiramente menor para caber nomes longos */
 }
 
-.grade-carros-AGERA {
+.fe {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 Colunas */
+    grid-template-columns: repeat(3, 1fr); /* 4 Colunas */
     grid-auto-rows: 1fr;                   /* Altura igual para todos */
     gap: 20px;
     width: 100%;
+
 }
 
 /* Ajuste ESPECÍFICO para os botões quando estão dentro da grade de carros */
-.grade-carros-AGERA .apresentacao__links_navegacao {
+.fe .apresentacao__links_navegacao {
     width: 100%;  /* Ocupa todo o espaço do quadrado da grade */
     height: 100%; /* Altura total */
     padding: 20px;
     font-size: 1.2rem; /* Fonte ligeiramente menor para caber nomes longos */
+}
+
+.lista__agera {
+    display: flex;
+
+    list-style-type: none;
+    margin: 0,1em 0;
+}
+
+.lista__agera__link {
+    margin-left: 1em;
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
 }
 
 /* --- IMAGENS E RODAPÉ --- */
@@ -415,7 +413,7 @@ body {
 }
 
 .apresentacao_imagem {
-    width: 50%;
+    width: 40%;
     margin: 25px;
     filter: drop-shadow(0 0 15px rgba(34, 212, 253, 0.9));
     border: 2px solid #9d05f5;
@@ -511,7 +509,8 @@ body {
 }
 
 .apresentacao_video:hover {
-    filter: drop-shadow(0 0 40px rgba(157, 5, 245, 0.6));
+    filter: drop-shadow(0 0 40px rgba(157, 5, 245, 0.6))
+    drop-shadow(0 0 45px rgba(157, 5, 245, 0.6));
     border-color: #22d4fd;
     transform: scale(1.05); 
     cursor: pointer;
@@ -530,7 +529,7 @@ body {
 }
 
 .rodape:hover {
-    color: var(--cor-quartiaria);
+    color: var(--cor-ONE-DESTAQUESELIN);
     cursor: pointer;
 }
 
@@ -632,16 +631,8 @@ body {
     }
 
         /* Transforma a grade de carros em 1 coluna no celular */
-    .grade-carros-FE {
+    .fe {
         grid-template-columns: 1fr;
-        justify-items: center;
-        align-items: center;
-    }
-
-    .grade-carros-AGERA {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        align-items: center;
     }
 
     .rodape, .rodape_hundra, .rodape-THOR, .rodape-VADER, .rodape-ONE-OF-ONE {
@@ -669,5 +660,9 @@ body {
     .rodape, .rodape_hundra, .rodape-THOR, .rodape-VADER, .rodape-ONE-OF-ONE  {
         font-size: 0.9rem;  /* Letra ainda menor para ecrãs muito pequenos */
         padding: 8px;
+    }
+
+    .fe{
+        grid-template-columns: 1fr;
     }
 }
